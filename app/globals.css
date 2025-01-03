@@ -91,3 +91,11 @@
     @apply bg-background text-foreground;
   }
 }
+
+footer a {
+  transition: all 0.3s ease;
+}
+
+footer a:hover {
+  opacity: 0.8;
+}

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Baloo_Tamma_2 } from 'next/font/google';
 import "./globals.css";
+import { Header } from '../components/layout/header/Header';
+import { Footer } from '../components/layout/footer/Footer';
 
 const balooTamma2 = Baloo_Tamma_2({
   subsets: ['latin'],
@@ -15,14 +17,18 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="en">
       <body className={`${balooTamma2.variable} antialiased bg-[var(--base)]`}>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
-        {children}
+        <Header />
+        <main className="flex-1 relative z-10 min-h-screen">
+          {children}
+        </main>
+        <Footer />
+
       </body>
     </html>
   );
