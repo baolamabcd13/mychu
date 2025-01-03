@@ -56,6 +56,19 @@ export const Footer = () => {
           </Link></p>
         </address>
 
+        {/* E-check Image */}
+        <div className="flex justify-center mt-8">
+          <Link href="https://echeck.numbala.com/hop-tac-xa-san-xuat-my-chu-bao-loc-dn1249.htm" target="_blank" rel="noopener noreferrer">
+            <Image 
+              src="https://echeck.numbala.com/imgs/echeck1.svg"
+              alt="E-check Verification"
+              width={300}
+              height={250}
+              className="object-contain"
+            />
+          </Link>
+        </div>
+
         {/* Copyright */}
         <div className="text-center mt-8 pt-6 pb-6 border-t border-white/20">
           <p>© {new Date().getFullYear()} by GAOCHU. All rights reserved.</p>
