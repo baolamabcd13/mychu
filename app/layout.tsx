@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { Baloo_Tamma_2 } from 'next/font/google';
+import { Baloo_Tamma_2 } from "next/font/google";
 import "./globals.css";
-import { Header } from '../components/layout/header/Header';
-import { Footer } from '../components/layout/footer/Footer';
+import { Header } from "../components/layout/header/Header";
+import { Footer } from "../components/layout/footer/Footer";
 
 const balooTamma2 = Baloo_Tamma_2({
-  subsets: ['latin'],
-  variable: '--font-baloo-tamma-2',
-  weight: ['400', '500', '600', '700', '800']
+  subsets: ["latin"],
+  variable: "--font-baloo-tamma-2",
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
@@ -18,17 +18,16 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      <body className={`${balooTamma2.variable} antialiased bg-[var(--base)]`}>
+      <body
+        className={`${balooTamma2.variable} antialiased bg-[var(--base)] min-h-screen- flex flex-col`}
+      >
         <Header />
-        <main className="flex-1 relative z-10 min-h-screen">
-          {children}
-        </main>
+        <main className="flex-1 relative">{children}</main>
         <Footer />
-
       </body>
     </html>
   );
